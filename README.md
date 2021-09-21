@@ -38,6 +38,7 @@ Dentro de un archivo Dockerfile algunos de los comandos que se pueden ejecutar s
     * BUILDOS - componente de sistema operativo de BUILDPLATFORM
     * BUILDARCH - componente de arquitectura de BUILDPLATFORM
     * BUILDVARIANT - componente de variante de BUILDPLATFORM
+
 Hay algunas ARGs predefinidas:
     * `HTTP_PROXY`
     * `HTTPS_PROXY`

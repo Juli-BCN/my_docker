@@ -72,13 +72,12 @@ Dentro de un archivo Dockerfile algunos de los comandos que se pueden ejecutar s
     * --start-period=DURATION (inicial: 0s)
     * --retries=N (inicial: 3)
 17) `SHELL` --> permite al shell por defecto ser usado con comandos directamente. En Linux, es shell inicial es `["/bin/sh", "-c"]`, y en Windows es `["cmd", "/S", "/C"]`. Este comando se utiliza mucho en Windows para escificar el uso de `powershell`. Por ejemplo:
---> uso directo
-    * RUN powershell -command Write-Host default
---> uso con shell
-    * SHELL ["powershell", "-command"]
-    * RUN Write-Host hello
-Otro ejemplo muy común:
---> uso directo
-    * cmd /S /C powershell -command Execute-MyCmdlet -param1 "c:\foo.txt"
---> uso con shell
-    * RUN ["powershell", "-command", "Execute-MyCmdlet", "-param1 \"c:\\foo.txt\""]
+    * uso directo
+        * RUN powershell -command Write-Host default
+    * uso con shell
+        * SHELL ["powershell", "-command"]
+        * RUN Write-Host hello
+    * uso directo
+        * cmd /S /C powershell -command Execute-MyCmdlet -param1 "c:\foo.txt"
+    * uso con shell
+        * RUN ["powershell", "-command", "Execute-MyCmdlet", "-param1 \"c:\\foo.txt\""]

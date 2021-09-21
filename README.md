@@ -38,13 +38,12 @@ Dentro de un archivo Dockerfile algunos de los comandos que se pueden ejecutar s
     * BUILDOS - componente de sistema operativo de BUILDPLATFORM
     * BUILDARCH - componente de arquitectura de BUILDPLATFORM
     * BUILDVARIANT - componente de variante de BUILDPLATFORM
-
-Hay algunas ARGs predefinidas:
-    * `HTTP_PROXY`
-    * `HTTPS_PROXY`
-    * `FTP_PROXY`
-    * `NO_PROXY`
-        * `ENV` siempre sobrescribe `ARG`
+    * Hay algunas ARGs predefinidas:
+        * `HTTP_PROXY`
+        * `HTTPS_PROXY`
+        * `FTP_PROXY`
+        * `NO_PROXY`
+            * `ENV` siempre sobrescribe `ARG`
 8) `ENTRYPOINT` --> permite configurar un contenedor que correrá como un ejecutable. Tiene la desventaja de iniciarse como un sub-comando de `/bin/sh -c`. Tenemos dos formas de usarlo:
     * `ENTRYPOINT ["ejecutable","parametro1","parametro2"]`
     * `ENTRYPOINT comando parametro1 parametro2`
